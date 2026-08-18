@@ -1,0 +1,4711 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Toko Birukishu — Premium Digital Store
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         STYLE
+    ====================================================== -->
+
+    <style>
+
+        :root {
+
+            --blue: #79bde8;
+            --blue-dark: #438fc5;
+            --blue-deep: #3478ab;
+
+            --blue-light: #e5f5ff;
+
+            --cream: #fffbea;
+
+            --pink: #ffb6d5;
+            --pink-dark: #ff8fbd;
+
+            --yellow: #fff1a8;
+
+            --green: #bdeed4;
+
+            --purple: #d9ceff;
+
+            --orange: #ffd5bd;
+
+            --text: #294052;
+            --muted: #78909c;
+
+            --white: #ffffff;
+
+            --shadow:
+                0 15px 35px rgba(69, 137, 176, .15);
+
+            --radius: 28px;
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family:
+                "Poppins",
+                sans-serif;
+
+            color:
+                var(--text);
+
+            background:
+
+                linear-gradient(
+                    45deg,
+                    rgba(120,188,232,.16) 25%,
+                    transparent 25%,
+                    transparent 75%,
+                    rgba(120,188,232,.16) 75%
+                ),
+
+                linear-gradient(
+                    45deg,
+                    rgba(120,188,232,.16) 25%,
+                    transparent 25%,
+                    transparent 75%,
+                    rgba(120,188,232,.16) 75%
+                );
+
+            background-size:
+                60px 60px;
+
+            background-position:
+                0 0,
+                30px 30px;
+
+            background-color:
+                #f8fcff;
+
+            overflow-x:
+                hidden;
+
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ====================================================== */
+
+        nav {
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 14px 7%;
+
+            background:
+                rgba(255,255,255,.90);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-bottom:
+                2px solid rgba(120,188,232,.15);
+
+        }
+
+
+        .logo {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 28px;
+            font-weight: 800;
+
+            color:
+                var(--blue-dark);
+
+        }
+
+
+        .logo span {
+
+            color:
+                var(--pink-dark);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+            gap: 30px;
+
+            list-style: none;
+
+        }
+
+
+        .nav-links a {
+
+            color:
+                var(--text);
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: .3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--blue-dark);
+
+        }
+
+
+        .menu-btn {
+
+            display: none;
+
+            font-size: 27px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =====================================================
+           DECORATION
+        ====================================================== */
+
+        .decor {
+
+            position: absolute;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+        }
+
+
+        .cloud {
+
+            background: white;
+
+            border-radius: 50px;
+
+            padding: 10px 18px;
+
+            box-shadow:
+                var(--shadow);
+
+            animation:
+                floating 4s ease-in-out infinite;
+
+        }
+
+
+        .cloud.one {
+
+            top: 150px;
+            left: 4%;
+
+        }
+
+
+        .cloud.two {
+
+            top: 340px;
+            right: 5%;
+
+            animation-delay: 1s;
+
+        }
+
+
+        @keyframes floating {
+
+            0%,
+            100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-12px);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 720px;
+
+            padding: 90px 7% 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr .9fr;
+
+            align-items: center;
+
+            gap: 50px;
+
+            position: relative;
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+            z-index: 2;
+
+        }
+
+
+        .badge {
+
+            display: inline-block;
+
+            background: white;
+
+            padding: 9px 18px;
+
+            border-radius: 50px;
+
+            box-shadow:
+                var(--shadow);
+
+            color:
+                var(--blue-dark);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size:
+                clamp(58px, 8vw, 100px);
+
+            line-height: .85;
+
+            color:
+                var(--blue-dark);
+
+            text-shadow:
+                5px 5px 0 #d7efff;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .hero h1 span {
+
+            color:
+                var(--pink-dark);
+
+            text-shadow:
+                4px 4px 0 #ffe1ed;
+
+        }
+
+
+        .hero p {
+
+            max-width: 570px;
+
+            line-height: 1.8;
+
+            font-size: 16px;
+
+            color:
+                #506b7b;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .buttons {
+
+            display: flex;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 22px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+
+        .btn-primary {
+
+            color: white;
+
+            background:
+                var(--blue-dark);
+
+            box-shadow:
+                0 7px 0 #2f719f;
+
+        }
+
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(4px);
+
+            box-shadow:
+                0 3px 0 #2f719f;
+
+        }
+
+
+        .btn-secondary {
+
+            background: white;
+
+            color:
+                var(--blue-dark);
+
+            border:
+                2px solid #d2edf9;
+
+        }
+
+
+        .btn-secondary:hover {
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        /* =====================================================
+           HERO CARD
+        ====================================================== */
+
+        .hero-visual {
+
+            display: flex;
+
+            justify-content: center;
+
+            position: relative;
+
+        }
+
+
+        .hero-card {
+
+            width: 370px;
+
+            min-height: 430px;
+
+            background:
+                var(--cream);
+
+            border:
+                3px dashed #b8b584;
+
+            border-radius: 35px;
+
+            padding: 35px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            transform:
+                rotate(2deg);
+
+            box-shadow:
+                13px 13px 0 #cdeeff,
+                var(--shadow);
+
+            transition: .4s;
+
+        }
+
+
+        .hero-card:hover {
+
+            transform:
+                rotate(0)
+                translateY(-10px);
+
+        }
+
+
+        .hero-card .heart {
+
+            font-size: 55px;
+
+            animation:
+                heartBeat 1.5s infinite;
+
+        }
+
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1);
+
+            }
+
+            50% {
+
+                transform:
+                    scale(1.15);
+
+            }
+
+        }
+
+
+        .hero-card h2 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 48px;
+
+            line-height: .9;
+
+            color:
+                var(--blue-dark);
+
+            margin: 15px 0;
+
+        }
+
+
+        .hero-card h2 span {
+
+            color:
+                var(--pink-dark);
+
+        }
+
+
+        .hero-card p {
+
+            line-height: 1.7;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           SECTION
+        ====================================================== */
+
+        section {
+
+            padding:
+                90px 7%;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .section-tag {
+
+            color:
+                var(--blue-dark);
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 48px;
+
+            margin: 5px 0;
+
+        }
+
+
+        .section-title p {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        /* =====================================================
+           APP LOGO SHOWCASE
+        ====================================================== */
+
+        .app-showcase {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .app-bubble {
+
+            width: 74px;
+            height: 74px;
+
+            background: white;
+
+            border-radius: 23px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            box-shadow:
+                var(--shadow);
+
+            border:
+                2px solid #e7f5fc;
+
+            transition: .35s;
+
+            position: relative;
+
+        }
+
+
+        .app-bubble:hover {
+
+            transform:
+                translateY(-9px)
+                rotate(-5deg);
+
+            border-color:
+                #bce4f7;
+
+        }
+
+
+        .app-bubble img {
+
+            width: 48px;
+            height: 48px;
+
+            object-fit: contain;
+
+        }
+
+
+        .app-bubble small {
+
+            position: absolute;
+
+            bottom: -22px;
+
+            font-size: 10px;
+
+            opacity: 0;
+
+            transition: .3s;
+
+            white-space: nowrap;
+
+        }
+
+
+        .app-bubble:hover small {
+
+            opacity: 1;
+
+        }
+
+
+        /* =====================================================
+           FILTER
+        ====================================================== */
+
+        .filters {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .filter-btn {
+
+            border: none;
+
+            background: white;
+
+            color:
+                var(--text);
+
+            padding:
+                10px 18px;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 5px 15px rgba(50,100,130,.08);
+
+            transition: .3s;
+
+        }
+
+
+        .filter-btn.active,
+        .filter-btn:hover {
+
+            background:
+                var(--blue-dark);
+
+            color: white;
+
+        }
+
+
+        /* =====================================================
+           CATEGORY TITLE
+        ====================================================== */
+
+        .category-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin:
+                45px 0 20px;
+
+        }
+
+
+        .category-title h3 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 30px;
+
+            color:
+                var(--text);
+
+        }
+
+
+        .category-line {
+
+            flex: 1;
+
+            height: 2px;
+
+            background:
+                #d9edf8;
+
+        }
+
+
+        /* =====================================================
+           PRODUCT GRID
+        ====================================================== */
+
+        .products {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .product-card {
+
+            background: white;
+
+            border:
+                2px solid #e5f4fb;
+
+            border-radius:
+                var(--radius);
+
+            padding: 23px;
+
+            box-shadow:
+                var(--shadow);
+
+            transition: .35s;
+
+            position: relative;
+
+            overflow: hidden;
+
+            animation:
+                cardAppear .45s ease;
+
+        }
+
+
+        @keyframes cardAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(15px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .product-card:hover {
+
+            transform:
+                translateY(-9px);
+
+            box-shadow:
+                0 20px 45px rgba(63,130,170,.2);
+
+        }
+
+
+        /* =====================================================
+           PRODUCT LOGO
+        ====================================================== */
+
+        .product-logo {
+
+            width: 70px;
+
+            height: 70px;
+
+            border-radius: 21px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                var(--blue-light);
+
+            margin-bottom: 16px;
+
+            overflow: hidden;
+
+        }
+
+
+        .product-logo img {
+
+            width: 55px;
+
+            height: 55px;
+
+            object-fit: contain;
+
+            transition: .3s;
+
+        }
+
+
+        .product-card:hover .product-logo img {
+
+            transform:
+                scale(1.08)
+                rotate(-3deg);
+
+        }
+
+
+        .product-card h4 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 25px;
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .product-card p {
+
+            color:
+                var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .product-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 8px;
+
+        }
+
+
+        .price {
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            color:
+                var(--blue-dark);
+
+        }
+
+
+        .order-btn {
+
+            border: none;
+
+            background:
+                var(--blue-light);
+
+            color:
+                var(--blue-dark);
+
+            padding:
+                8px 14px;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+
+        .order-btn:hover {
+
+            background:
+                var(--blue-dark);
+
+            color: white;
+
+        }
+
+
+        /* =====================================================
+           WHY US
+        ====================================================== */
+
+        .why {
+
+            background:
+                rgba(255,255,255,.72);
+
+        }
+
+
+        .features {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .feature {
+
+            background: white;
+
+            padding:
+                28px 18px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                var(--shadow);
+
+            transition: .3s;
+
+        }
+
+
+        .feature:hover {
+
+            transform:
+                translateY(-7px);
+
+        }
+
+
+        .feature-icon {
+
+            font-size: 36px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .feature h3 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 23px;
+
+        }
+
+
+        .feature p {
+
+            font-size: 13px;
+
+            color:
+                var(--muted);
+
+            margin-top: 5px;
+
+        }
+
+
+        /* =====================================================
+           TESTIMONIAL
+        ====================================================== */
+
+        .testimonial-wrapper {
+
+            max-width: 900px;
+
+            margin: auto;
+
+        }
+
+
+        .testimonial-form {
+
+            background:
+                var(--cream);
+
+            border:
+                3px dashed #c0bd91;
+
+            border-radius: 30px;
+
+            padding: 30px;
+
+            box-shadow:
+                10px 10px 0 #dff2ff;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .testimonial-form h3 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 30px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .testimonial-form p {
+
+            font-size: 13px;
+
+            color:
+                var(--muted);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        .input-group {
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .input-group label {
+
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+
+            width: 100%;
+
+            border:
+                2px solid #dceff8;
+
+            border-radius: 16px;
+
+            padding:
+                12px 15px;
+
+            outline: none;
+
+            font-family: inherit;
+
+            background: white;
+
+            transition: .3s;
+
+        }
+
+
+        .input-group textarea {
+
+            min-height: 110px;
+
+            resize: vertical;
+
+        }
+
+
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group select:focus {
+
+            border-color:
+                var(--blue);
+
+        }
+
+
+        .submit-testimonial {
+
+            width: 100%;
+
+            border: none;
+
+            padding: 14px;
+
+            border-radius: 50px;
+
+            background:
+                var(--blue-dark);
+
+            color: white;
+
+            font-family: inherit;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+        .submit-testimonial:hover {
+
+            transform:
+                translateY(-3px);
+
+            background:
+                var(--blue-deep);
+
+        }
+
+
+        /* =====================================================
+           TESTIMONIAL CARDS
+        ====================================================== */
+
+        .testimonial-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .testimonial-card {
+
+            background: white;
+
+            border-radius: 25px;
+
+            padding: 24px;
+
+            box-shadow:
+                var(--shadow);
+
+            border:
+                2px solid #e6f4fb;
+
+            animation:
+                popIn .4s ease;
+
+        }
+
+
+        @keyframes popIn {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(.95);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+
+            }
+
+        }
+
+
+        .stars {
+
+            color:
+                #ffc928;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .testimonial-card p {
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            color:
+                #536b79;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .customer {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+        .avatar {
+
+            width: 40px;
+
+            height: 40px;
+
+            background:
+                var(--blue-light);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 18px;
+
+        }
+
+
+        .customer strong {
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           INSTAGRAM CTA
+        ====================================================== */
+
+        .cta {
+
+            margin:
+                70px 7%;
+
+            padding:
+                65px 25px;
+
+            border-radius: 40px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8dcef2,
+                    #66afe1
+                );
+
+            box-shadow:
+                var(--shadow);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .cta::before {
+
+            content: "♡";
+
+            position: absolute;
+
+            font-size: 180px;
+
+            right: 3%;
+
+            top: -55px;
+
+            opacity: .12;
+
+        }
+
+
+        .cta h2 {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 50px;
+
+            line-height: 1;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .cta p {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .instagram-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: white;
+
+            color:
+                var(--blue-dark);
+
+            padding:
+                13px 24px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            transition: .3s;
+
+        }
+
+
+        .instagram-btn:hover {
+
+            transform:
+                translateY(-5px)
+                rotate(-2deg);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,.12);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background:
+                var(--cream);
+
+            padding:
+                45px 7% 25px;
+
+            text-align: center;
+
+            border-top:
+                3px solid #e8e1af;
+
+        }
+
+
+        .footer-logo {
+
+            font-family:
+                "Baloo 2",
+                cursive;
+
+            font-size: 36px;
+
+            font-weight: 800;
+
+            color:
+                var(--blue-dark);
+
+        }
+
+
+        footer p {
+
+            color:
+                var(--muted);
+
+            font-size: 13px;
+
+            margin:
+                6px auto 20px;
+
+        }
+
+
+        .instagram-footer {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            text-decoration: none;
+
+            color:
+                var(--pink-dark);
+
+            font-weight: 700;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .copyright {
+
+            border-top:
+                1px solid #e5dfbd;
+
+            padding-top: 18px;
+
+            color:
+                #8d999f;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =====================================================
+           TOAST
+        ====================================================== */
+
+        .toast {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            left: 50%;
+
+            transform:
+                translate(-50%,120px);
+
+            background:
+                #294052;
+
+            color: white;
+
+            padding:
+                13px 22px;
+
+            border-radius: 50px;
+
+            z-index: 9999;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: .4s;
+
+        }
+
+
+        .toast.show {
+
+            transform:
+                translate(-50%,0);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media(max-width: 1000px) {
+
+            .products {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+            .features {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+        }
+
+
+        @media(max-width: 900px) {
+
+            .hero {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+            }
+
+            .hero p {
+
+                margin:
+                    0 auto 30px;
+
+            }
+
+            .buttons {
+
+                justify-content: center;
+
+            }
+
+        }
+
+
+        @media(max-width: 650px) {
+
+            nav {
+
+                padding:
+                    13px 5%;
+
+            }
+
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 65px;
+
+                left: 5%;
+
+                right: 5%;
+
+                flex-direction: column;
+
+                background: white;
+
+                padding: 20px;
+
+                border-radius: 20px;
+
+                box-shadow:
+                    var(--shadow);
+
+            }
+
+
+            .nav-links.active {
+
+                display: flex;
+
+            }
+
+
+            .menu-btn {
+
+                display: block;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    65px 5%;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 60px;
+
+            }
+
+
+            .hero-card {
+
+                width: 90%;
+
+            }
+
+
+            section {
+
+                padding:
+                    65px 5%;
+
+            }
+
+
+            .products {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .features {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .testimonial-list {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .form-row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .section-title h2 {
+
+                font-size: 40px;
+
+            }
+
+
+            .cta {
+
+                margin:
+                    50px 5%;
+
+            }
+
+
+            .cta h2 {
+
+                font-size: 40px;
+
+            }
+
+
+            .category-title h3 {
+
+                font-size: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav>
+
+    <div class="logo">
+
+        Toko
+        <span>Birukishu</span>
+        ♡
+
+    </div>
+
+
+    <ul
+        class="nav-links"
+        id="navLinks"
+    >
+
+        <li>
+            <a href="#home">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#catalogue">
+                Catalogue
+            </a>
+        </li>
+
+        <li>
+            <a href="#testie">
+                Testie
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+
+    <div
+        class="menu-btn"
+        onclick="toggleMenu()"
+    >
+
+        ☰
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     FLOATING DECOR
+====================================================== -->
+
+<div class="decor cloud one">
+
+    ✨ cute digital shop
+
+</div>
+
+
+<div class="decor cloud two">
+
+     trusted & affordable
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+        <div class="badge">
+
+            ✦ Premium Digital Store ✦
+
+        </div>
+
+
+        <h1>
+
+            Toko
+            <br>
+
+            <span>Birukishu!</span>
+
+        </h1>
+
+
+        <p>
+
+            Temukan berbagai aplikasi premium
+            untuk editing, desain, hiburan,
+            produktivitas, dan kebutuhan digital
+            lainnya — semuanya dengan harga
+            yang ramah di kantong ♡
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#catalogue"
+                class="btn btn-primary"
+            >
+
+                🛍️ Explore Catalogue
+
+            </a>
+
+
+            <a
+                href="#testie"
+                class="btn btn-secondary"
+            >
+
+                💌 See Testie
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-card">
+
+            <div class="heart">
+                ♡
+            </div>
+
+
+            <h2>
+
+                TOKO
+                <br>
+
+                <span>BIRUKISHU</span>
+
+            </h2>
+
+
+            <p>
+
+                Premium Apps
+                <br>
+
+                for your everyday
+                <br>
+
+                digital needs.
+
+            </p>
+
+
+            <br>
+
+
+            <small>
+
+                ✦ edit • design • entertainment ✦
+
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATALOGUE
+====================================================== -->
+
+<section
+    id="catalogue"
+>
+
+    <div class="section-title">
+
+        <span class="section-tag">
+
+            ✦ OUR COLLECTION ✦
+
+        </span>
+
+
+        <h2>
+
+            Pick your favourite app! 🛍️
+
+        </h2>
+
+
+        <p>
+
+            Berbagai aplikasi premium untuk
+            kebutuhan sehari-hari kamu.
+            Tinggal pilih, lalu hubungi Birukishu
+            lewat Instagram ♡
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         LOGO SHOWCASE
+    ================================================== -->
+
+    <div class="app-showcase">
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/netflix.png"
+                alt="Netflix"
+            >
+
+            <small>Netflix</small>
+
+        </div>
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/capcut.png"
+                alt="CapCut"
+            >
+
+            <small>CapCut</small>
+
+        </div>
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/canva.png"
+                alt="Canva"
+            >
+
+            <small>Canva</small>
+
+        </div>
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/spotify.png"
+                alt="Spotify"
+            >
+
+            <small>Spotify</small>
+
+        </div>
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/chatgpt.png"
+                alt="ChatGPT"
+            >
+
+            <small>ChatGPT</small>
+
+        </div>
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/Telegram Premium.png"
+                alt="Telegram"
+            >
+
+            <small>Telegram</small>
+
+        </div>
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/youtube.png"
+                alt="YouTube"
+            >
+
+            <small>YouTube</small>
+
+        </div>
+
+
+        <div class="app-bubble">
+
+            <img
+                src="assets/Microsoft 365.png"
+                alt="Microsoft 365"
+            >
+
+            <small>Microsoft 365</small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FILTER
+    ================================================== -->
+
+    <div class="filters">
+
+        <button
+            class="filter-btn active"
+            onclick="filterProducts('all', this)"
+        >
+            ✨ All
+        </button>
+
+
+        <button
+            class="filter-btn"
+            onclick="filterProducts('streaming', this)"
+        >
+            🎬 Streaming
+        </button>
+
+
+        <button
+            class="filter-btn"
+            onclick="filterProducts('editing', this)"
+        >
+            🎨 Editing & Design
+        </button>
+
+
+        <button
+            class="filter-btn"
+            onclick="filterProducts('ai', this)"
+        >
+            🤖 AI & Productivity
+        </button>
+
+
+        <button
+            class="filter-btn"
+            onclick="filterProducts('photo', this)"
+        >
+            📱 Photo / Creative
+        </button>
+
+
+        <button
+            class="filter-btn"
+            onclick="filterProducts('music', this)"
+        >
+            🎧 Music & YouTube
+        </button>
+
+
+        <button
+            class="filter-btn"
+            onclick="filterProducts('entertainment', this)"
+        >
+            📺 Entertainment
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         STREAMING
+    ================================================== -->
+
+    <div
+        class="catalogue-category"
+        data-category-section="streaming"
+    >
+
+        <div class="category-title">
+
+            <span>🎬</span>
+
+            <h3>
+                Streaming
+            </h3>
+
+            <div class="category-line"></div>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- NETFLIX -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/netflix.png"
+                        alt="Netflix"
+                    >
+
+                </div>
+
+                <h4>Netflix</h4>
+
+                <p>
+                    Streaming film dan series
+                    favorit untuk menemani
+                    waktu santai.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Premium 
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Netflix')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDIO -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/vidio.png"
+                        alt="Vidio"
+                    >
+
+                </div>
+
+                <h4>Vidio</h4>
+
+                <p>
+                    Nikmati berbagai tontonan
+                    dan hiburan digital.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Streaming 
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Vidio')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- IQIYI -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/iqiyi.png"
+                        alt="iQIYI"
+                    >
+
+                </div>
+
+                <h4>iQIYI</h4>
+
+                <p>
+                    Drama Asia, anime,
+                    variety show, dan hiburan.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Drama ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('iQIYI')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WETV -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/wetv.png"
+                        alt="WeTV"
+                    >
+
+                </div>
+
+                <h4>WeTV</h4>
+
+                <p>
+                    Koleksi drama Asia
+                    dan tontonan favorit.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Premium ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('WeTV')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- YOUKU -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/youku.png"
+                        alt="Youku"
+                    >
+
+                </div>
+
+                <h4>Youku</h4>
+
+                <p>
+                    Berbagai drama dan
+                    entertainment Asia.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Watch ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Youku')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BILIBILI -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/bstation.png"
+                        alt="Bstation Bilibili"
+                    >
+
+                </div>
+
+                <h4>
+                    Bstation / Bilibili
+                </h4>
+
+                <p>
+                    Anime, video, variety,
+                    dan berbagai konten seru.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Anime 
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Bstation / Bilibili')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HBO MAX -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/hbomax.png"
+                        alt="HBO Max"
+                    >
+
+                </div>
+
+                <h4>HBO Max</h4>
+
+                <p>
+                    Film dan series premium
+                    pilihan.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Premium 🎬
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('HBO Max')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRIME VIDEO -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/primevideo.png"
+                        alt="Prime Video"
+                    >
+
+                </div>
+
+                <h4>Prime Video</h4>
+
+                <p>
+                    Pilihan film dan series
+                    untuk waktu santai.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Streaming ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Prime Video')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOKLOK -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/loklok.png"
+                        alt="Loklok"
+                    >
+
+                </div>
+
+                <h4>Loklok</h4>
+
+                <p>
+                    Koleksi drama dan tontonan
+                    untuk menemani hari.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Watch ✨
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Loklok')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIU -->
+
+            <div
+                class="product-card"
+                data-category="streaming"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/viu.png"
+                        alt="Viu"
+                    >
+
+                </div>
+
+                <h4>Viu</h4>
+
+                <p>
+                    Drama Asia dan hiburan
+                    favoritmu.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Drama ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Viu')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+          
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         EDITING & DESIGN
+    ================================================== -->
+
+    <div
+        class="catalogue-category"
+        data-category-section="editing"
+    >
+
+        <div class="category-title">
+
+            <span>🎨</span>
+
+            <h3>
+                Editing & Design
+            </h3>
+
+            <div class="category-line"></div>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- CAPCUT -->
+
+            <div
+                class="product-card"
+                data-category="editing"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/capcut.png"
+                        alt="CapCut"
+                    >
+
+                </div>
+
+                <h4>CapCut</h4>
+
+                <p>
+                    Edit video dengan fitur
+                    premium dan tools kreatif.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Editing 🎬
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('CapCut')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PICSART -->
+
+            <div
+                class="product-card"
+                data-category="editing"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/picsart.png"
+                        alt="PicsArt"
+                    >
+
+                </div>
+
+                <h4>PicsArt</h4>
+
+                <p>
+                    Edit foto dan eksplor
+                    kreativitas tanpa batas.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Creative ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('PicsArt')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ALIGHT MOTION -->
+
+            <div
+                class="product-card"
+                data-category="editing"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/alight motion.png"
+                        alt="Alight Motion"
+                    >
+
+                </div>
+
+                <h4>
+                    Alight Motion (AM)
+                </h4>
+
+                <p>
+                    Motion graphics dan
+                    video editing lebih seru.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Motion ✨
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Alight Motion')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CANVA -->
+
+            <div
+                class="product-card"
+                data-category="editing"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/canva.png"
+                        alt="Canva"
+                    >
+
+                </div>
+
+                <h4>Canva</h4>
+
+                <p>
+                    Desain poster, presentasi,
+                    feed, dan berbagai kebutuhan.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Design 🎨
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Canva')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- POLARR -->
+
+            <div
+                class="product-card"
+                data-category="editing"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/polarr.png"
+                        alt="Polarr"
+                    >
+
+                </div>
+
+                <h4>Polarr</h4>
+
+                <p>
+                    Edit foto dengan berbagai
+                    tools dan efek kreatif.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Photo Edit
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Polarr')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         AI & PRODUCTIVITY
+    ================================================== -->
+
+    <div
+        class="catalogue-category"
+        data-category-section="ai"
+    >
+
+        <div class="category-title">
+
+            <span>🤖</span>
+
+            <h3>
+                AI & Productivity
+            </h3>
+
+            <div class="category-line"></div>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- CHATGPT -->
+
+            <div
+                class="product-card"
+                data-category="ai"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/chatgpt.png"
+                        alt="ChatGPT"
+                    >
+
+                </div>
+
+                <h4>ChatGPT</h4>
+
+                <p>
+                    AI assistant untuk ide,
+                    belajar, dan produktivitas.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        AI ✦
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('ChatGPT')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GRAMMARLY -->
+
+            <div
+                class="product-card"
+                data-category="ai"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/grammarly.png"
+                        alt="Grammarly"
+                    >
+
+                </div>
+
+                <h4>Grammarly</h4>
+
+                <p>
+                    Membantu tulisan menjadi
+                    lebih rapi dan profesional.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Writing ✍️
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Grammarly')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUILLBOT -->
+
+            <div
+                class="product-card"
+                data-category="ai"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/quillbot.png"
+                        alt="QuillBot"
+                    >
+
+                </div>
+
+                <h4>QuillBot</h4>
+
+                <p>
+                    Tools untuk membantu
+                    menulis dan parafrase.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Writing ✨
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('QuillBot')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GROK -->
+
+            <div
+                class="product-card"
+                data-category="ai"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/Grok AI.png"
+                        alt="Grok AI"
+                    >
+
+                </div>
+
+                <h4>Grok AI</h4>
+
+                <p>
+                    Eksplorasi AI untuk
+                    berbagai kebutuhan.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        AI 🤖
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Grok AI')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GEMINI -->
+
+            <div
+                class="product-card"
+                data-category="ai"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/Gemini AI.png"
+                        alt="Gemini AI"
+                    >
+
+                </div>
+
+                <h4>Gemini AI</h4>
+
+                <p>
+                    AI assistant untuk ide,
+                    informasi, dan produktivitas.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Smart ✦
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Gemini AI')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MICROSOFT 365 -->
+
+            <div
+                class="product-card"
+                data-category="ai"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/Microsoft 365.png"
+                        alt="Microsoft 365"
+                    >
+
+                </div>
+
+                <h4>Microsoft 365</h4>
+
+                <p>
+                    Berbagai tools produktivitas
+                    untuk belajar dan bekerja.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Productivity
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Microsoft 365')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SCRIBD -->
+
+            <div
+                class="product-card"
+                data-category="ai"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/scribd.png"
+                        alt="Scribd"
+                    >
+
+                </div>
+
+                <h4>Scribd</h4>
+
+                <p>
+                    Akses berbagai bacaan
+                    dan dokumen digital.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Reading 📖
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Scribd')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PHOTO / CREATIVE
+    ================================================== -->
+
+    <div
+        class="catalogue-category"
+        data-category-section="photo"
+    >
+
+        <div class="category-title">
+
+            <span>📱</span>
+
+            <h3>
+                Photo / Creative
+            </h3>
+
+            <div class="category-line"></div>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- MEITU -->
+
+            <div
+                class="product-card"
+                data-category="photo"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/meitu.png"
+                        alt="Meitu"
+                    >
+
+                </div>
+
+                <h4>Meitu</h4>
+
+                <p>
+                    Edit foto dan tambahkan
+                    berbagai efek aesthetic.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Aesthetic ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Meitu')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REMINI -->
+
+            <div
+                class="product-card"
+                data-category="photo"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/remini.png"
+                        alt="Remini"
+                    >
+
+                </div>
+
+                <h4>Remini</h4>
+
+                <p>
+                    Tingkatkan kualitas foto
+                    dengan bantuan AI.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Enhance ✨
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Remini')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- IBIS PAINT -->
+
+            <div
+                class="product-card"
+                data-category="photo"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/ibis paint x.png"
+                        alt="ibis Paint X"
+                    >
+
+                </div>
+
+                <h4>ibis Paint X</h4>
+
+                <p>
+                    Digital drawing dan
+                    ilustrasi dengan berbagai tools.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Drawing 🖌️
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('ibis Paint X')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OLDROLL -->
+
+            <div
+                class="product-card"
+                data-category="photo"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/oldroll.png"
+                        alt="OldRoll"
+                    >
+
+                </div>
+
+                <h4>OldRoll</h4>
+
+                <p>
+                    Kamera dengan nuansa
+                    vintage dan retro.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Vintage 📸
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('OldRoll')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         MUSIC & YOUTUBE
+    ================================================== -->
+
+    <div
+        class="catalogue-category"
+        data-category-section="music"
+    >
+
+        <div class="category-title">
+
+            <span>🎧</span>
+
+            <h3>
+                Music & YouTube
+            </h3>
+
+            <div class="category-line"></div>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- APPLE MUSIC -->
+
+            <div
+                class="product-card"
+                data-category="music"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/Apple Music.png"
+                        alt="Apple Music"
+                    >
+
+                </div>
+
+                <h4>Apple Music</h4>
+
+                <p>
+                    Dengarkan musik favorit
+                    kapan saja.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Music 🎧
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Apple Music')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- YOUTUBE -->
+
+            <div
+                class="product-card"
+                data-category="music"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/youtube.png"
+                        alt="YouTube Premium"
+                    >
+
+                </div>
+
+                <h4>
+                    YouTube / YouTube Premium
+                </h4>
+
+                <p>
+                    Nikmati pengalaman YouTube
+                    dengan fitur premium.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Video ▶️
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('YouTube Premium')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SPOTIFY -->
+
+            <div
+                class="product-card"
+                data-category="music"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/spotify.png"
+                        alt="Spotify"
+                    >
+
+                </div>
+
+                <h4>Spotify</h4>
+
+                <p>
+                    Dengarkan musik dan podcast
+                    favorit tanpa gangguan.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Music ♫
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Spotify')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ENTERTAINMENT
+    ================================================== -->
+
+    <div
+        class="catalogue-category"
+        data-category-section="entertainment"
+    >
+
+        <div class="category-title">
+
+            <span>📺</span>
+
+            <h3>
+                Entertainment lainnya
+            </h3>
+
+            <div class="category-line"></div>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- MELOLO -->
+
+            <div
+                class="product-card"
+                data-category="entertainment"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/melolo.png"
+                        alt="Melolo"
+                    >
+
+                </div>
+
+                <h4>Melolo</h4>
+
+                <p>
+                    Hiburan dan drama pendek
+                    untuk menemani waktu luang.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Drama ♡
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Melolo')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SHORTMAX -->
+
+            <div
+                class="product-card"
+                data-category="entertainment"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/shortmax.png"
+                        alt="ShortMax"
+                    >
+
+                </div>
+
+                <h4>ShortMax</h4>
+
+                <p>
+                    Nikmati berbagai drama
+                    pendek dan hiburan.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Short Drama
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('ShortMax')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DRAMABOX -->
+
+            <div
+                class="product-card"
+                data-category="entertainment"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/dramabox.png"
+                        alt="DramaBox"
+                    >
+
+                </div>
+
+                <h4>DramaBox</h4>
+
+                <p>
+                    Berbagai drama pendek
+                    dan cerita menarik.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Drama 🎬
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('DramaBox')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIKI -->
+
+            <div
+                class="product-card"
+                data-category="entertainment"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/Viki Rakuten+.png"
+                        alt="Viki Rakuten"
+                    >
+
+                </div>
+
+                <h4>Viki Rakuten+</h4>
+
+                <p>
+                    Drama Asia dan berbagai
+                    konten hiburan pilihan.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Asian Drama
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Viki Rakuten+')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TELEGRAM -->
+
+            <div
+                class="product-card"
+                data-category="entertainment"
+            >
+
+                <div class="product-logo">
+
+                    <img
+                        src="assets/Telegram Premium.png"
+                        alt="Telegram Premium"
+                    >
+
+                </div>
+
+                <h4>Telegram Premium</h4>
+
+                <p>
+                    Nikmati fitur tambahan
+                    Telegram Premium.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        Premium ✈️
+                    </span>
+
+                    <button
+                        class="order-btn"
+                        onclick="orderProduct('Telegram Premium')"
+                    >
+                        Tanya →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY BIRUKISHU
+====================================================== -->
+
+<section class="why">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            ✦ WHY BIRUKISHU? ✦
+        </span>
+
+        <h2>
+            Small shop, big care! 
+        </h2>
+
+        <p>
+            Karena beli aplikasi premium
+            juga harus terasa nyaman ♡
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💸
+            </div>
+
+            <h3>
+                Affordable
+            </h3>
+
+            <p>
+                Harga bersahabat
+                untuk berbagai kebutuhan.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Fast Response
+            </h3>
+
+            <p>
+                Respons cepat ketika
+                kamu membutuhkan bantuan.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔐
+            </div>
+
+            <h3>
+                Clear Info
+            </h3>
+
+            <p>
+                Informasi produk dibuat
+                jelas dan mudah dipahami.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                
+            </div>
+
+            <h3>
+                Friendly
+            </h3>
+
+            <p>
+                Pelayanan ramah dan
+                nyaman untuk pelanggan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TESTIMONIAL
+====================================================== -->
+
+<section id="testie">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            ✦ CUSTOMER LOVE ✦
+        </span>
+
+        <h2>
+            What they say? 💌
+        </h2>
+
+        <p>
+            Pernah order di Toko Birukishu?
+            Yuk tinggalkan cerita kecilmu
+            di sini ♡
+        </p>
+
+    </div>
+
+
+    <div class="testimonial-wrapper">
+
+
+        <div class="testimonial-form">
+
+            <h3>
+                Share your experience! 
+            </h3>
+
+            <p>
+                Isi nama, rating, dan pengalaman
+                kamu selama menggunakan layanan
+                Toko Birukishu.
+            </p>
+
+
+            <form id="testimonialForm">
+
+                <div class="form-row">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Nama
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Nama kamu..."
+                            maxlength="30"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Rating
+                        </label>
+
+                        <select
+                            id="customerRating"
+                            required
+                        >
+
+                            <option value="">
+                                Pilih rating
+                            </option>
+
+                            <option value="5">
+                                ⭐⭐⭐⭐⭐ — Amazing!
+                            </option>
+
+                            <option value="4">
+                                ⭐⭐⭐⭐ — Bagus!
+                            </option>
+
+                            <option value="3">
+                                ⭐⭐⭐ — Lumayan
+                            </option>
+
+                            <option value="2">
+                                ⭐⭐ — Kurang
+                            </option>
+
+                            <option value="1">
+                                ⭐ — Perlu ditingkatkan
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Testimoni
+                    </label>
+
+                    <textarea
+                        id="customerMessage"
+                        placeholder="Ceritain pengalaman kamu..."
+                        maxlength="300"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-testimonial"
+                >
+
+                    💌 Kirim Testimoni
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div
+            class="testimonial-list"
+            id="testimonialList"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<div
+    class="cta"
+    id="contact"
+>
+
+    <h2>
+        Let's be mutuals! 
+    </h2>
+
+    <p>
+        Mau tanya produk, cek harga,
+        atau langsung order?
+        Yuk mampir ke Instagram Birukishu!
+    </p>
+
+
+    <a
+        href="https://www.instagram.com/toko.birukishu?igsh=MTNkZ2ExM2JleWkyNA=="
+        target="_blank"
+        rel="noopener noreferrer"
+        class="instagram-btn"
+    >
+
+        📷 @toko.birukishu
+
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        Toko Birukishu ♡
+    </div>
+
+
+    <p>
+        Upgrade your digital experience
+        with a little touch of Birukishu ✦
+    </p>
+
+
+    <a
+        class="instagram-footer"
+        href="https://www.instagram.com/toko.birukishu?igsh=MTNkZ2ExM2JleWkyNA=="
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        📷 Follow @toko.birukishu
+
+    </a>
+
+
+    <div class="copyright">
+
+        © 2026 Toko Birukishu
+        — Made with ♡
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    Done! ✨
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("active");
+
+}
+
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+function showToast(message) {
+
+    const toast =
+        document.getElementById("toast");
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add("show");
+
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 2500);
+
+}
+
+
+
+/* =====================================================
+   INSTAGRAM ORDER
+===================================================== */
+
+function orderProduct(productName) {
+
+    showToast(
+        "Yuk cek " +
+        productName +
+        " di Instagram 💌"
+    );
+
+
+    setTimeout(() => {
+
+        window.open(
+
+            "https://www.instagram.com/toko.birukishu?igsh=MTNkZ2ExM2JleWkyNA==",
+
+            "_blank"
+
+        );
+
+    }, 700);
+
+}
+
+
+
+/* =====================================================
+   FILTER CATALOGUE
+===================================================== */
+
+function filterProducts(
+    category,
+    button
+) {
+
+    const buttons =
+        document.querySelectorAll(
+            ".filter-btn"
+        );
+
+
+    buttons.forEach(btn => {
+
+        btn.classList.remove("active");
+
+    });
+
+
+    button.classList.add("active");
+
+
+    const sections =
+        document.querySelectorAll(
+            ".catalogue-category"
+        );
+
+
+    sections.forEach(section => {
+
+        const sectionCategory =
+            section.dataset.categorySection;
+
+
+        if (
+            category === "all" ||
+            sectionCategory === category
+        ) {
+
+            section.style.display =
+                "block";
+
+        } else {
+
+            section.style.display =
+                "none";
+
+        }
+
+    });
+
+}
+
+
+
+/* =====================================================
+   TESTIMONIAL STORAGE
+===================================================== */
+
+const testimonialForm =
+    document.getElementById(
+        "testimonialForm"
+    );
+
+
+const testimonialList =
+    document.getElementById(
+        "testimonialList"
+    );
+
+
+
+/* =====================================================
+   DEFAULT TESTIMONIAL
+===================================================== */
+
+const defaultTestimonials = [
+
+    {
+
+        name:
+            "Happy Customer",
+
+        rating:
+            5,
+
+        message:
+            "Pelayanannya cepat banget dan prosesnya gampang. Suka banget! "
+
+    },
+
+
+    {
+
+        name:
+            "Birukishu Bestie",
+
+        rating:
+            5,
+
+        message:
+            "Harganya oke dan adminnya ramah. Bakal order lagi! ♡"
+
+    }
+
+];
+
+
+
+/* =====================================================
+   GET TESTIMONIAL
+===================================================== */
+
+function getTestimonials() {
+
+    const saved =
+        localStorage.getItem(
+            "birukishuTestimonials"
+        );
+
+
+    if (saved) {
+
+        return JSON.parse(saved);
+
+    }
+
+
+    return defaultTestimonials;
+
+}
+
+
+
+/* =====================================================
+   DISPLAY TESTIMONIAL
+===================================================== */
+
+function displayTestimonials() {
+
+    const testimonials =
+        getTestimonials();
+
+
+    testimonialList.innerHTML =
+        "";
+
+
+    testimonials
+        .slice()
+        .reverse()
+        .forEach(
+            testimonial => {
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "testimonial-card";
+
+
+                const stars =
+                    "⭐".repeat(
+                        testimonial.rating
+                    );
+
+
+                card.innerHTML = `
+
+                    <div class="stars">
+                        ${stars}
+                    </div>
+
+                    <p>
+                        "${escapeHTML(
+                            testimonial.message
+                        )}"
+                    </p>
+
+                    <div class="customer">
+
+                        <div class="avatar">
+                            ♡
+                        </div>
+
+                        <strong>
+                            ${escapeHTML(
+                                testimonial.name
+                            )}
+                        </strong>
+
+                    </div>
+
+                `;
+
+
+                testimonialList.appendChild(
+                    card
+                );
+
+            }
+        );
+
+}
+
+
+
+/* =====================================================
+   SUBMIT TESTIMONIAL
+===================================================== */
+
+testimonialForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document
+                .getElementById(
+                    "customerName"
+                )
+                .value
+                .trim();
+
+
+        const rating =
+            Number(
+                document
+                    .getElementById(
+                        "customerRating"
+                    )
+                    .value
+            );
+
+
+        const message =
+            document
+                .getElementById(
+                    "customerMessage"
+                )
+                .value
+                .trim();
+
+
+        if (
+            !name ||
+            !rating ||
+            !message
+        ) {
+
+            showToast(
+                "Isi semuanya dulu yaa "
+            );
+
+            return;
+
+        }
+
+
+        const testimonials =
+            getTestimonials();
+
+
+        testimonials.push({
+
+            name:
+                name,
+
+            rating:
+                rating,
+
+            message:
+                message
+
+        });
+
+
+        localStorage.setItem(
+
+            "birukishuTestimonials",
+
+            JSON.stringify(
+                testimonials
+            )
+
+        );
+
+
+        displayTestimonials();
+
+
+        testimonialForm.reset();
+
+
+        showToast(
+            "Testimonimu berhasil ditambahkan! ♡"
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        text;
+
+
+    return div.innerHTML;
+
+}
+
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+displayTestimonials();
+
+
+
+/* =====================================================
+   CLOSE MOBILE MENU
+===================================================== */
+
+document
+    .querySelectorAll(
+        ".nav-links a"
+    )
+    .forEach(
+        link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    document
+                        .getElementById(
+                            "navLinks"
+                        )
+                        .classList.remove(
+                            "active"
+                        );
+
+                }
+            );
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
